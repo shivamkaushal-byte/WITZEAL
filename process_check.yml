@@ -1,0 +1,5 @@
+Hosts: all
+tasks:
+  - name: check apache process status
+    shell: ps -ef | grep httpd
+    register: apache_status
