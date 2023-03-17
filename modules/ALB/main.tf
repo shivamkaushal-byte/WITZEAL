@@ -5,7 +5,7 @@ resource "aws_lb" "prod_lb" {
   security_groups = [aws_security_group.alb_sg.id]
   subnets = var.public_subnet
 
-  tags{
+  tags = {
     name = "prod_alb"
   }
 }
