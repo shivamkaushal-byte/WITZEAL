@@ -32,8 +32,8 @@ resource "aws_key_pair" "developer" {
        Name = "prod instance"
   }
    provisioner "remote-exec" {
-    inline [
-       echo "build ssh connection to run playbook"
+    inline = [
+       "echo 'build ssh connection to run playbook' "
      ]
   connection {
      host = self.public_ip
