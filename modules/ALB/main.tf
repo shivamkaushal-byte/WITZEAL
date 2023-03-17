@@ -10,6 +10,7 @@ resource "aws_lb" "prod_lb" {
   }
 }
 resource "aws_security_group" "alb_sg" {
+vpc_id = var.vpc_id
 
 ingress {
  from_port   = 80
