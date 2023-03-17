@@ -43,6 +43,6 @@ resource "aws_key_pair" "developer" {
   }
   }
   provisioner "local-exec"{
-  command = "ansible-playbook -i $(aws_instance.instance-1.public_ip), --private-key $(var.privatekey) play.yml"
+  command = "ansible-playbook -i ${aws_instance.instance-1.public_ip}, --private-key ${var.privatekey} play.yml"
   }
   }
