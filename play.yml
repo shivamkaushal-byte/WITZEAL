@@ -34,3 +34,14 @@ tasks:
     copy:
       src: /home/WITZEAL/sample.war
       dest: /var/www/html
+
+  - name: Install Memcached
+    yum:
+      name: memcached
+      state: latest
+        
+  - name: Start Memcached service
+    service:
+      name: memcached
+      state: started
+      enabled: true
