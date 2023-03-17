@@ -15,4 +15,5 @@ module "ALB" {
   source = "./modules/ALB"
   vpc_id = module.vpc.vpc_id
   instance_id = module.EC2.instance-id
+  public_subnet = [module.vpc.subnet_id,module.vpc.Subnet_ID]
 }
