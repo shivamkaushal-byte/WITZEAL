@@ -8,7 +8,7 @@ variable "privatekey"{
   default = "developer"
 }
 variable "ami_id" {
-   defaults = "ami-0499632f10efc5a62"
+   default = "ami-0499632f10efc5a62"
 }
 variable "instance_type" {
    default = "t2.micro"
