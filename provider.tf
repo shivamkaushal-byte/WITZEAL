@@ -6,3 +6,8 @@ region = var.region
 module "vpc"{
   source = "./modules/vpc"
 }
+module "EC2"{
+  source = "./modules/EC2"
+  vpc_id = module.vpc.vpc_id
+  subnet_id = module.vpc.subnet_id
+}
