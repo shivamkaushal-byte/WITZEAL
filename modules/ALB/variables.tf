@@ -1,6 +1,6 @@
 variable "public_subnet" {
   type = list
-  default = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
+  default = ["subnet-06756f294abe01deb", "subnet-0b1b9747f50367fe1", "subnet-076ad0dd74aafdd80"]
 }
 variable "vpc_id" {
    type = string
