@@ -15,20 +15,20 @@ tasks:
 
   - name: Configure mysql root password
     mysql_user:
-        name: root
-        password: "{{ mysql_root_passwd }}"
-        login_unix_socket: /var/run/mysqld/mysqld.sock
+      name: root
+      password: "{{ mysql_root_passwd }}"
+      login_unix_socket: /var/run/mysqld/mysqld.sock
 
   - name: install tomcat
-      yum:
-        name: tomcat
-        state: present
+    yum:
+      name: tomcat
+      state: present
 
   - name: Configure Tomcat server.xml
-      replace:
-        path: /usr/share/tomcat/conf/server.xml
-        regexp: 'Connector port="8080"'
-        replace: 'Connector port="80"'
+    replace:
+      path: /usr/share/tomcat/conf/server.xml
+      regexp: 'Connector port="8080"'
+      replace: 'Connector port="80"'
 
   - name: Deploy WAR file
     copy:
