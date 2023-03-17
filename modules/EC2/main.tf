@@ -27,7 +27,6 @@ resource "aws_key_pair" "developer" {
       subnet_id = var.subnet_id
       vpc_security_group_ids =[aws_security_group.ssh-allowed.id]
       key_name = aws_key_pair.developer.id
-      count = 1
      tags = {
        Name = "prod instance"
   }
