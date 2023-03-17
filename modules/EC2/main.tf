@@ -19,7 +19,7 @@ resource "aws_security_group" "ssh-allowed" {
 }
 resource "aws_key_pair" "developer" {
   key_name   = "developer"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDf+Q81u+ChYTl1Dj/cxe1lnlDP8mA3FMvQKM66eu0ATkr41WK5djvHivGwm+0Fb3TKDbURSr/YdBqLzVG9Jpb72wnqvVra0LkYvrCI4XC$"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDf+Q81u+ChYTl1Dj/cxe1lnlDP8mA3FMvQKM66eu0ATkr41WK5djvHivGwm+0Fb3TKDbURSr/YdBqLzVG9Jpb72wnqvVra0LkYvrCI4XCuj6PVAthFtvsNJaGBCtA2l1lXyoGDOD56qSKzBQJ36Patdv8t3eZbRatJyZXwyoQJPMKwX5Ai+3ctxCqOJAssF5EpSNMdF+RzD2TWoFa6iuW2Ak2syYRoK+psZdhS9bzmWAEh22ZiRl4DYmKYvJsuZiAPpAVQIKESItxWsdZ+c/9AM3jMZ98zrV48xEPJcWO597SxEg+cEUdNxT928pqK5EsJDFR1XzYd5BcLwvHpl7m3 ec2-user@ip-172-31-24-225.eu-central-1.compute.internal"
   }
   resource "aws_instance" "instance-1" {
       ami = "ami-09e2d756e7d78558d"
